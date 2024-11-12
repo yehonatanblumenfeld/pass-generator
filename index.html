@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/lock.png" alt="Logo" class="logo"> 
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="slider-container">
+            <label for="lengthSlider" class="slider-label">
+                Length: 
+                <span id="lengthValue" class="slider-value">12</span>
+            </label>
+            <input type="range" id="lengthSlider" min="12" max="100" value="12" step="1" class="slider">
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" id="uppercase"> Include Uppercase
+            </label>
+            <label>
+                <input type="checkbox" id="lowercase" checked> Include Lowercase
+            </label>
+            <label>
+                <input type="checkbox" id="numbers" checked> Include Numbers
+            </label>
+            <label>
+                <input type="checkbox" id="symbols"> Include Symbols
+            </label>
+        </div>
+        
+        <!-- Button to generate password -->
+        <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+        
+        <!-- Output of the generated password -->
+        <div id="passwordOutput" class="output">
+            <input type="text" id="generatedPassword" readonly class="password-field">
+            <button id="copyButton" class="copy-btn">Copy</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

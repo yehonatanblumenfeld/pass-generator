@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size:large;
+}
+
+.navbar {
+    background-color: #044183;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline-block;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    height: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Slider Container */
+.slider-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.slider-label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.slider-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-left: 10px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 450px;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #b5cde7, #0368d3);
+    appearance: none;
+    outline: none;
+    transition: background 0.3s ease;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #0368d3;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #0368d3;
+    cursor: pointer;
+}
+
+.slider:focus {
+    background: linear-gradient(to right, #b5cde7, #0368d3);
+}
+
+/* Generate Password Button */
+.generate-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.generate-btn:hover {
+    background-color: #044183;
+}
+
+/* Output area */
+.password-field {
+    padding: 12px 24px;
+    width: 500px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font: italic;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+
+/* .output {
+    margin-top: 15px;
+} */
+
+/* Copy Button */
+.copy-btn {
+    background-color: #303235;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.copy-btn:hover {
+    background-color: #044183;
+}
+
+@media (max-width: 480px) {
+    /* Adjust the container's padding and max-width to make it fit better on smaller screens */
+    .container {
+        padding: 15px;  /* Reduce padding for smaller screens */
+        max-width: 90%;  /* Ensure it doesn't take up the full width, leave some space around */
+        margin: 20px auto; /* Add top/bottom margin to avoid sticking to the edge */
+    }
+
+    /* Ensure the slider takes up the full available width */
+    .slider {
+        max-width: 100%;  /* Full width of the container */
+    }
+
+    .slider-label {
+        font-size: 16px;  /* Slightly smaller label font size */
+    }
+
+    .slider-value {
+        font-size: 18px;  /* Ensure value text is clear and readable */
+        margin-top: 10px;  /* Add some space between the value and the slider */
+    }
+
+    /* Adjust button font size and padding for smaller screens */
+    .generate-btn {
+        font-size: 14px;  /* Smaller text size */
+        padding: 10px 20px;  /* Adjust padding for smaller screens */
+        width: 100%;  /* Make button full-width on small screens */
+    }
+
+    .password-field {
+        font-size: 18px;  /* Smaller font size for better readability */
+        padding: 12px;  /* Adjust padding for mobile devices */
+    }
+
+    /* Make the copy button full-width and properly sized for mobile */
+    .copy-btn {
+        font-size: 14px;  /* Slightly smaller font size */
+        width: 100%;  /* Full-width button for easier tapping */
+        padding: 10px 20px;  /* Adjust button padding */
+    }
+
+    /* Adjust the logo size for better mobile display */
+    .navbar-logo img {
+        width: 30px;  /* Make the logo smaller to fit the navbar on small screens */
+    }
+
+    /* Stack the navbar links vertically instead of horizontally on small screens */
+    .navbar-links {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-links li {
+        margin-bottom: 10px;  /* Add space between the links */
+    }
+
+    /* Make sure the navbar items fit properly on smaller screens */
+    .navbar-links a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+
