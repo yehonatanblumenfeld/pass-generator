@@ -36,7 +36,7 @@ function generatePassword() {
     // Display the generated password
     document.getElementById("generatedPassword").value = password;
 }
-
+generatePassword()
 document.getElementById("copyButton").addEventListener("click", function() {
     // Get the text field
     var copyText = document.getElementById("generatedPassword");
